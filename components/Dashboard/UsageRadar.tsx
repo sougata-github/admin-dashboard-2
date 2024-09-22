@@ -1,6 +1,7 @@
 "use client";
 
 import { customerSegmentationData } from "@/constants";
+
 import { MdDataUsage } from "react-icons/md";
 import {
   PolarAngleAxis,
@@ -26,17 +27,22 @@ const UsageRadar = () => {
           width: "100%",
           height: 300,
         }}
-        className="text-sm"
+        className="text-sm flex items-center justify-center"
       >
         <ResponsiveContainer>
           <RadarChart
             cx="50%"
             cy="50%"
-            outerRadius="80%"
+            outerRadius="60%"
             data={customerSegmentationData}
           >
             <PolarGrid stroke="#374151" />
-            <PolarAngleAxis dataKey="subject" stroke="#9CA3AF" />
+            <PolarAngleAxis
+              dataKey="subject"
+              stroke="#9CA3AF"
+              axisLine={false}
+              tickLine={false}
+            />
             <PolarRadiusAxis angle={60} domain={[0, 150]} stroke="#9CA3AF" />
             <Radar
               name="Segment A"
