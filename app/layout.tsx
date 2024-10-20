@@ -7,7 +7,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Admin Dashboard",
-  description: "Admin dashboard built using Next.js",
+  description: "Admin dashboard built using Next.js.",
 };
 
 export default function RootLayout({
